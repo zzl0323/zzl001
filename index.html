@@ -3,8 +3,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style>
+			textarea{
+				width: 300px;
+				height: 200px;
+			}
+		</style>
 	</head>
 	<body>
-		版本一
+	<textarea  id="inp" onkeyup="aaa()"></textarea>
+    <button id="but">提交</button>
 	</body>
 </html>
+<script type="text/javascript">
+		var inp=document.getElementById('inp')
+        var but=document.getElementById('but')
+        function aaa(){
+            if(inp.value.length>=60){
+                but.disabled=true
+            }
+        }
+</script>
